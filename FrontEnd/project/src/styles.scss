@@ -1,0 +1,14 @@
+@import "ngx-toastr/toastr"; //taostr Service style
+.input-with-validation {
+  margin-bottom: 0 !important;
+}
+div .has-error {
+  height: 30px;
+  padding-left: 4px;
+}
+
+.button-box button:disabled {
+  background-color: #f2f2f2 !important;
+  color: #333 !important;
+  cursor: not-allowed !important;
+}

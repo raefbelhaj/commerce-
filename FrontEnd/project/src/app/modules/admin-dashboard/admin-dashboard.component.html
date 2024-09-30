@@ -1,0 +1,18 @@
+<section style="width: 100%;padding-top: 10%; margin-top: 0%; margin-left: 0%;background-color: black;">
+    <div class="text-center">
+        <input class="form-control" type="file" (change)="onChange($event)">
+
+        <button (click)="onUpload()" class="btn btn-success">
+            Upload
+        </button>
+    </div>
+
+    <!-- Shareable short link of  uploaded file -->
+    <img [src]="image">
+    <!--Flag variable is used here-->
+    @if (loading) {
+    <div class="container">
+        <h3>Loading ...</h3>
+    </div>
+    }
+</section>

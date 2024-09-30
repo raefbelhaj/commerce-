@@ -1,0 +1,101 @@
+<div class="breadcrumb-area pt-35 pb-35 bg-gray-3">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <ul>
+                <li>
+                    <a routerLink="/home">Home</a>
+                </li>
+                <li class="active">Register</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="login-register-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ms-auto me-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav">
+                        <a class="active" data-bs-toggle="tab" href="#lg1">
+                            <h4> Register </h4>
+                        </a>
+                        <a data-bs-toggle="tab" href="#lg2">
+                            <h4> signUp </h4>
+                        </a>
+                    </div>
+                    @if (!isLoggedIn) {
+                    <div class="tab-content">
+                        <div id="lg1" class="tab-pane active">
+                            <div class="login-form-container">
+                                <div class="login-register-form">
+                                    <form [formGroup]="signUpForm">
+                                        <!-- Full Name Field -->
+                                        <input type="text" class="input-with-validation" name="full-name"
+                                            placeholder="Full Name" formControlName="fullName">
+                                        <div class="invalid-feedback d-block has-error">
+                                            @if (signUpForm.get('fullName')?.errors?.['required']) {
+                                            <small translate>form.validator.error.required</small>
+                                            }
+                                            @if (signUpForm.get('fullName')?.errors?.['minlength']) {
+                                            <small>{{ 'form.validator.error.minLength' | translate:{requiredLength: '3'} }}
+                                            </small>
+                                            }
+                                        </div>
+
+                                        <!-- Email Field -->
+                                        <input type="email" class="input-with-validation" name="user-name"
+                                            placeholder="Email" formControlName="email">
+                                        <div class="invalid-feedback d-block has-error">
+                                            @if (signUpForm.get('email')?.errors?.['required']) {
+                                            <small translate>form.validator.error.required</small>
+                                            }
+                                            @if (signUpForm.get('email')?.errors?.['email']) {
+                                            <small translate>form.validator.error.email</small>
+                                            }
+                                        </div>
+
+                                        <!-- Password Field -->
+                                        <input type="password" class="input-with-validation" name="user-password"
+                                            placeholder="Password" formControlName="password">
+                                        <div class="invalid-feedback d-block has-error">
+                                            @if (signUpForm.get('password')?.errors?.['required']) {
+                                            <small class="d-block" translate>form.validator.error.required</small> }
+                                            @if (signUpForm.get('password')?.errors?.['minlength']) {
+                                            <small>{{ 'form.validator.error.minLength' | translate:{requiredLength: '5'} }}
+                                            </small>
+                                            }
+                                            @if (signUpForm.get('password')?.errors?.['maxlength']) {
+                                            <small>{{ 'form.validator.error.maxLength' | translate:{requiredLength: '20'} }}
+                                            </small> }
+                                            @if (signUpForm.get('password')?.errors?.['pattern']) {
+                                            <small class="d-block"
+                                                translate>form.validator.error.patternPassword</small> }
+                                        </div>
+
+                                        <!-- Confirm Password Field -->
+                                        <input type="password" class="input-with-validation"
+                                            name="user-password-confirm" placeholder="Confirm password"
+                                            formControlName="confirmPassword">
+                                        <div class="invalid-feedback d-block has-error">
+                                            @if (signUpForm.get('confirmPassword')?.errors?.['required']) {
+                                            <small class="d-block" translate>form.validator.error.required</small> }
+                                            @if (signUpForm.get('confirmPassword')?.errors?.['notEqual']) {
+                                            <small translate>form.validator.error.notEqual</small>
+                                            }
+                                        </div>
+
+                                        <div class="button-box">
+                                            <button type="submit" [disabled]="signUpForm.invalid"
+                                                (click)="onSubmit()"><span>Register</span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

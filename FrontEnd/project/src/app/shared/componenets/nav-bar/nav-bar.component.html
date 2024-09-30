@@ -1,0 +1,216 @@
+<header class="header-area header-padding-1 sticky-bar header-res-padding clearfix">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-2 col-lg-2 col-md-6 col-4">
+        <div class="logo">
+          <a href="#">
+            <img alt="" src="../assets/img/logo/logo.webp" />
+          </a>
+        </div>
+      </div>
+      <div class="col-xl-8 col-lg-8 d-none d-lg-block">
+        <div class="main-menu">
+          <nav>
+            <ul>
+              <li>
+                <a routerLink="/home">Home</a>
+              </li>
+              <li>
+                <a routerLink="/shop">Shop</a>
+              </li>
+              <li><a href="#">Collection</a></li>
+              <li>
+                <a href="#"> Pages <i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">cart page</a></li>
+                  <li><a href="#">checkout </a></li>
+                  <li><a href="#">wishlist </a></li>
+                  <li><a href="#">my account</a></li>
+                  <li><a>login / register </a></li>
+                  <li><a href="#">contact us </a></li>
+                  <li><a href="#">404 page </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Blog <i class="fa fa-angle-down"></i></a>
+                <ul class="submenu">
+                  <li><a href="#">blog standard</a></li>
+                  <li><a href="#">blog no sidebar</a></li>
+                  <li><a href="#">blog right sidebar</a></li>
+                  <li><a href="#">blog details 1</a></li>
+                  <li><a href="#">blog details 2</a></li>
+                  <li><a href="#">blog details 3</a></li>
+                </ul>
+              </li>
+              <li><a href="#"> About </a></li>
+              <li><a href="#"> Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-2 col-md-6 col-8">
+        <div class="header-right-wrap">
+          <div class="same-style header-search">
+            <a class="search-active" href="#"><i class="pe-7s-search"></i></a>
+            <div class="search-content">
+              <form action="#">
+                <input type="text" placeholder="Search" />
+                <button class="button-search">
+                  <i class="pe-7s-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="same-style account-satting">
+            <a class="account-satting-active"><i class="pe-7s-user-female"></i></a>
+            <div class="account-dropdown">
+              <ul>
+                <li><a routerLink="/login">Login</a></li>
+                <li><a routerLink="/register">Register</a></li>
+                <li><a>Wishlist </a></li>
+                <li><a>my account</a></li>
+                @if (isLoggedIn()) {<li><a (click)="logout()">Logout</a></li>}
+              </ul>
+            </div>
+          </div>
+          <div class="same-style header-wishlist">
+            <a href="#"><i class="pe-7s-like"></i></a>
+          </div>
+          <div class="same-style cart-wrap">
+            <button class="icon-cart">
+              <i class="pe-7s-shopbag"></i>
+              <span class="count-style">02</span>
+            </button>
+            <div class="shopping-cart-content">
+              <ul>
+                <li class="single-shopping-cart">
+                  <div class="shopping-cart-img">
+                    <a href="#"><img alt="" src="../assets/img/cart/cart-1.webp" /></a>
+                  </div>
+                  <div class="shopping-cart-title">
+                    <h4><a href="#">T- Shart & Jeans </a></h4>
+                    <h6>Qty: 02</h6>
+                    <span>$260.00</span>
+                  </div>
+                  <div class="shopping-cart-delete">
+                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                  </div>
+                </li>
+                <li class="single-shopping-cart">
+                  <div class="shopping-cart-img">
+                    <a href="#"><img alt="" src="../assets/img/cart/cart-2.webp" /></a>
+                  </div>
+                  <div class="shopping-cart-title">
+                    <h4><a href="#">T- Shart & Jeans </a></h4>
+                    <h6>Qty: 02</h6>
+                    <span>$260.00</span>
+                  </div>
+                  <div class="shopping-cart-delete">
+                    <a href="#"><i class="fa fa-times-circle"></i></a>
+                  </div>
+                </li>
+              </ul>
+              <div class="shopping-cart-total">
+                <h4>Shipping : <span>$20.00</span></h4>
+                <h4>Total : <span class="shop-total">$260.00</span></h4>
+              </div>
+              <div class="shopping-cart-btn btn-hover text-center">
+                <a class="default-btn" href="#">view cart</a>
+                <a class="default-btn" href="#">checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu-area">
+      <div class="mobile-menu">
+        <nav id="mobile-menu-active">
+          <ul class="menu-overflow">
+            <li>
+              <a href="#">HOME</a>
+              <ul>
+                <li>
+                  <a href="#">Demo Group 01</a>
+                  <ul>
+                    <li><a href="#">Home 1 – Fashion</a></li>
+                    <li><a href="#">Home 2 – Fashion</a></li>
+                    <li><a href="#">Home 3 – Fashion</a></li>
+                    <li><a href="#">Home 4 – Fashion</a></li>
+                    <li><a href="#">Home 5 – Fashion</a></li>
+                    <li><a href="#">Home 6 – Fashion</a></li>
+                    <li><a href="#">Home 7 – Fashion</a></li>
+                    <li><a href="#">Home 8 – Minimal</a></li>
+                    <li><a href="#">Home 9 – Electronics</a></li>
+                    <li><a href="#">Home 10 – Furniture</a></li>
+                    <li><a href="#">Home 11 - showcase slider</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Shop</a>
+              <ul>
+                <li>
+                  <a href="#">shop layout</a>
+                  <ul>
+                    <li><a href="#">standard style</a></li>
+                    <li><a href="#">Grid filter style</a></li>
+                    <li><a href="#">Grid 2 column</a></li>
+                    <li><a href="#">Grid No sidebar</a></li>
+                    <li><a href="#">Grid full wide </a></li>
+                    <li><a href="#">Grid right sidebar</a></li>
+                    <li><a href="#">list 1 column box </a></li>
+                    <li><a href="#">list 1 column full wide </a></li>
+                    <li><a href="#">list 2 column full wide</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">product details</a>
+                  <ul>
+                    <li><a href="#">tab style 1</a></li>
+                    <li><a href="#">tab style 2</a></li>
+                    <li><a href="#">tab style 3</a></li>
+                    <li><a href="#">sticky style</a></li>
+                    <li><a href="#">gallery style </a></li>
+                    <li><a href="#">Slider style</a></li>
+                    <li><a href="#">affiliate style</a></li>
+                    <li><a href="#">fixed image style </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Collection</a></li>
+            <li>
+              <a href="#">Pages</a>
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">cart page</a></li>
+                <li><a href="#">checkout </a></li>
+                <li><a href="#">wishlist </a></li>
+                <li><a href="#">my account</a></li>
+                <li><a href="#">login / register </a></li>
+                <li><a href="#">contact us </a></li>
+                <li><a href="#">404 page </a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Blog</a>
+              <ul>
+                <li><a href="#">blog standard</a></li>
+                <li><a href="#">blog no sidebar</a></li>
+                <li><a href="#">blog right sidebar</a></li>
+                <li><a href="#">blog details 1</a></li>
+                <li><a href="#l">blog details 2</a></li>
+                <li><a href="#">blog details 3</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About us</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
