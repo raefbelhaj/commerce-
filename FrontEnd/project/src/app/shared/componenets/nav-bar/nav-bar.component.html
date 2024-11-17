@@ -26,7 +26,7 @@
                   <li><a href="#">cart page</a></li>
                   <li><a href="#">checkout </a></li>
                   <li><a href="#">wishlist </a></li>
-                  <li><a href="#">my account</a></li>
+                  <li><a href='user-space'>my account</a></li>
                   <li><a>login / register </a></li>
                   <li><a href="#">contact us </a></li>
                   <li><a href="#">404 page </a></li>
@@ -69,7 +69,7 @@
                 <li><a routerLink="/login">Login</a></li>
                 <li><a routerLink="/register">Register</a></li>
                 <li><a>Wishlist </a></li>
-                <li><a>my account</a></li>
+                <li><a routerLink="/user-space">my account</a></li>
                 @if (isLoggedIn()) {<li><a (click)="logout()">Logout</a></li>}
               </ul>
             </div>
@@ -189,7 +189,7 @@
                 <li><a href="#">cart page</a></li>
                 <li><a href="#">checkout </a></li>
                 <li><a href="#">wishlist </a></li>
-                <li><a href="#">my account</a></li>
+                <li><a href='user-space'>my account</a></li>
                 <li><a href="#">login / register </a></li>
                 <li><a href="#">contact us </a></li>
                 <li><a href="#">404 page </a></li>

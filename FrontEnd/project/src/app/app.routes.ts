@@ -6,6 +6,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { AdminDashboardComponent } from './modules/admin-dashboard/admin-dashboard.component';
 import { ShopComponent } from './modules/shop/shop.component';
 import { ProductDetailsComponent } from './modules/product-details/product-details.component';
+import { UserSpaceComponent } from './modules/core/user-space/user-space.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +16,8 @@ export const routes: Routes = [
     { path: 'shop', component: ShopComponent },
     { path: 'product-details/:id', component: ProductDetailsComponent },
     { path: 'dashboard', component: AdminDashboardComponent },
+    { path: 'user-space', component: UserSpaceComponent },
+
     { path: '**', component: NotFoundComponent }
 
 ];
